@@ -1,3 +1,7 @@
+_metadata*
+.DS_Store
+_metadata/generated_indexed_rulesets
+
 # Logs
 logs
 *.log
