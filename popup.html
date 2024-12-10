@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Filter Options</title>
+        <link
+            href="/assets/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <style>
+            input::placeholder {
+                color: lightgrey !important;
+                opacity: 1;
+            }
+
+            body {
+                width: 350px;
+                height: auto;
+                margin: 10px;
+                display: flex;
+                align-items: center;
+                box-sizing: border-box;
+                background-color: #373946;
+                color: lightgrey;
+            }
+
+            .btn-group label {
+                flex: 1; /* Make all buttons take equal space */
+                text-align: center;
+            }
+            .custom-container {
+                width: 100%; /* Ensure consistent width for both rows */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="d-flex align-items-center w-100">
+            <div class="custom-container">
+                <div class="row mb-3 text-center">
+                    <span>Does the Dog Die? Companion App</span>
+                </div>
+                <!-- Row 1: Search Input -->
+                <div class="row mb-3">
+                    <div class="col">
+                        <div class="input-group">
+                            <input
+                                id="movieSearchInput"
+                                type="text"
+                                class="form-control bg-dark text-light"
+                                placeholder="Movie Title"
+                                aria-label="Movie Title"
+                                aria-describedby="button-addon2"
+                            />
+                            <button
+                                id="movieSearchButton"
+                                class="btn btn-outline-secondary"
+                                type="button"
+                            >
+                                Search
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Row 2: Filter Buttons -->
+                <div class="row">
+                    <div class="col">
+                        <span class="me-2">Filter to only show:</span>
+                        <div
+                            class="btn-group w-100"
+                            role="group"
+                            aria-label="Filter options"
+                        >
+                            <!-- Both Option -->
+                            <input
+                                type="radio"
+                                class="btn-check"
+                                name="btnradio"
+                                id="btnradio1"
+                                autocomplete="off"
+                                checked
+                            />
+                            <label
+                                class="btn btn-outline-primary"
+                                for="btnradio1"
+                                >Both</label
+                            >
+
+                            <!-- Yes Option -->
+                            <input
+                                type="radio"
+                                class="btn-check"
+                                name="btnradio"
+                                id="btnradio2"
+                                autocomplete="off"
+                            />
+                            <label
+                                class="btn btn-outline-danger"
+                                for="btnradio2"
+                                >Yes</label
+                            >
+
+                            <!-- No Option -->
+                            <input
+                                type="radio"
+                                class="btn-check"
+                                name="btnradio"
+                                id="btnradio3"
+                                autocomplete="off"
+                            />
+                            <label
+                                class="btn btn-outline-success"
+                                for="btnradio3"
+                                >No</label
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="/assets/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+        <script type="module" src="popup.js"></script>
+    </body>
+</html>
